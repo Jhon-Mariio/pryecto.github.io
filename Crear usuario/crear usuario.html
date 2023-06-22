@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Icono.jpg.jpeg" />
+	<link rel="apple-touch-icon" href="./Icono.jpg.jpeg">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900" rel="stylesheet">
+    <title>Document</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-image: url('./WhatsApp\ Image\ 2023-06-17\ at\ 11.56.01\ AM.jpeg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    #wrapper {
+        width: 30%;
+        margin: 0 auto;
+    }
+    
+    form {
+        background: transparent;
+    }
+    
+    #titleRegistration {
+        text-align: center;
+        font-size: 30px;
+        color: white
+        (145, 5, 5);
+    }
+    
+    #userInformation {
+        border: 1px solid (145, 5, 5);
+        border-bottom: none;
+    }
+    
+    legend {
+        font-weight: bold;
+        font-size: 24px;
+        color:(145, 5, 5);
+    }
+    
+    .divInformation {
+        width: 100%;
+        height: 75px;
+    }
+    
+    .divInformation div {
+        width: 51%;
+        height: 25%;
+        float: right;
+    }
+    
+    .divInformation div p {
+        color: white(248, 1, 1);
+        width: 100%;
+        height: 100%;
+        float: right;
+        font-size: 12px;
+        margin-top: 0px;
+        text-align: center;
+    }
+    
+    .label {
+        color:  white(145, 5, 5);
+        height: 30%;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    .input {
+        margin-top: 2px;
+        border-radius: 3px;
+        text-align: center;
+        height: 25%;
+        width: 50%;
+        float: right;
+        background-color: white;
+        border: 1px solid grey;
+    }
+    
+    #nextStep {
+        border: 1px solid  white(145, 5, 5);
+        border-top: none;
+        border-top: none;
+        text-align: center;
+    }
+    
+    #nextStepBtn {
+        background-color: yellow(145, 5, 5);
+        height: 50px;
+        width: 150px;
+        color:black;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    
+    #nextStepBtn:hover {
+        cursor: pointer;
+    }
+    
+    #verifyHuman {
+        text-align: center;
+        border: 1px solid white(145, 5, 5);
+        margin-top: 40%;
+    }
+    
+    .labelNumber {
+        font-size: 24px;
+        font-weight: bold;
+        color: white(145, 5, 5);
+    }
+    
+    #numberVerification {
+        width: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        color: rgb(4, 133, 36);
+    }
+    
+    #incorrectSum {
+        color: yellow(248, 1, 1);
+        font-size: 20px;
+        text-align: center;
+        display: none;
+    }
+    
+    #submitFieldset {
+        border: none;
+        margin-bottom: 40%;
+    }
+    
+    #submit {
+        width: 100%;
+        text-align: center;
+    }
+    
+    #submitBtn {
+        background-color: white(145, 5, 5);
+        height: 50px;
+        width: 150px;
+        color: white;
+        font-size: 22px;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    
+    #submitBtn:hover {
+        cursor: pointer;
+    }
+    
+    #ageVerification {
+        font-size: 22px;
+        font-weight: bold;
+        border: 1px solid white(145, 5, 5);
+        margin-top: 40%;
+        margin-bottom: 40%;
+    }
+    
+    #yesBtn {
+        float: left;
+        border-radius: 10px;
+        background-color: rgb(250, 164, 3);
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        height: 50px;
+        width: 150px;
+    }
+    
+    #noBtn {
+        float: right;
+        border-radius: 10px;
+        background-color: white(211, 6, 6);
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        height: 50px;
+        width: 150px;
+    }
+    
+    #congratulationsFieldset {
+        border: 1px solid white(102, 2, 2);
+        margin-top: 40%;
+        margin-bottom: 40%;
+    }
+    
+    #congratulations {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        color: white(145, 5, 5);
+    }
+    
+    #successfullySubmitted {
+        text-align: center;
+        font-size: 22px;
+        font-style: italic;
+        color:  white(145, 5, 5);
+    }
+    
+    #stoppingFieldset {
+        border: 1px solid white(248, 1, 1);
+        margin-top: 40%;
+        margin-bottom: 40%;
+    }
+    
+    #stop {
+        text-align: center;
+        font-size: 28px;
+        font-weight: bold;
+        color:  white(248, 1, 1);
+    }
+    
+    #notAllowedToContinue {
+        text-align: center;
+        font-size: 22px;
+        font-style: italic;
+        color: white(248, 1, 1);
+    }
+    
+    .errorDiv {
+        width: 50%;
+        float: right;
+        margin-top: 0px;
+        font-size: 8px;
+    }
+    
+    #emptyUsername {
+        display: none;
+    }
+    
+    #notEnoughLetters {
+        display: none;
+    }
+    
+    #tooMuchLetters {
+        display: none;
+    }
+    
+    #lettersOrNumbers {
+        display: none;
+    }
+    
+    #emptyFirstName {
+        display: none;
+    }
+    
+    #incorrectFirstName {
+        display: none;
+    }
+    
+    #emptyLastName {
+        display: none;
+    }
+    
+    #incorrectLastName {
+        display: none;
+    }
+    
+    #emptyEmail {
+        display: none;
+    }
+    
+    #incorrectEmail {
+        display: none;
+    }
+    
+    #emptyPassword {
+        display: none;
+    }
+    
+    #tooShortPassword {
+        display: none;
+    }
+    
+    #tooLongPassword {
+        display: none;
+    }
+    
+    #passwordNotMatch {
+        display: none;
+    }
+    
+    #emptyField {
+        display: none;
+    }
+    
+    @media screen and (max-width: 1334px) {
+        #titleRegistration {
+            color: white;
+            font-size: 24px;
+        }
+        legend {
+            font-size: 20px;
+        }
+        .label {
+            font-size: 18px;
+        }
+        #nextStepBtn {
+            font-size: 16px;
+        }
+        #submitBtn {
+            font-size: 20px;
+        }
+        #yesBtn {
+            width: 100%;
+        }
+        #noBtn {
+            width: 100%;
+        }
+        #congratulations {
+            font-size: 24px;
+        }
+        #successfullySubmitted {
+            font-size: 18px;
+        }
+        #stop {
+            font-size: 24px;
+        }
+        #notAllowedToContinue {
+            font-size: 24px;
+        }
+    }
+    
+    @media screen and (max-width: 1220px) {
+        #wrapper {
+            width: 35%;
+        }
+        #titleRegistration {
+            color: white;
+            font-size: 20px;
+        }
+        legend {
+            font-size: 18px;
+        }
+        .label {
+            font-size: 16px;
+        }
+        .input {
+            width: 98%;
+            font-size: 12px;
+        }
+        .divInformation div {
+            width: 100%;
+        }
+        #congratulations {
+            font-size: 14px;
+        }
+        #successfullySubmitted {
+            font-size: 12px;
+        }
+        #stop {
+            font-size: 14px;
+        }
+        #notAllowedToContinue {
+            font-size: 12px;
+        }
+    }
+    
+    @media screen and (max-width: 750px) {
+        #wrapper {
+            width: 40%;
+        }
+    }
+    
+    @media screen and (max-width: 550px) {
+        #wrapper {
+            width: 56%;
+        }
+    }
+    
+    @media screen and (max-width: 450px) {
+        #wrapper {
+            width: 76%;
+        }
+    }
+    .titleRegistration{
+       color: white;
+    }
+    .i{
+        color: white;
+    }
+    .label{
+        color: white;
+    }
+    .logo {
+    position: fixed;
+    width: 155px;
+    top: 10px;
+    right: 1755px;
+    border: 2px;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+    <body>
+
+        <div id="wrapper">
+            <img src="./Logo.jpg.jpeg" class="logo">
+            <h2 class="titleRegistration">FORMULARIO DE REGISTRO DE TU CASA IDEAL</h2>
+            <form>
+                <fieldset id="userInformation">
+                    <legend class="i">Información del usuario</legend>
+    
+                    <div class="divInformation">
+                        <label class="label" for="username">Nombre y Apellidos:</label>
+                        <input type="text" id="username" class="input" placeholder="nombres y apellidos" autocomplete="off" autofocus="autofocus"
+                        />
+                        <div id="errorUsername" class="errorDiv">
+                            <p id="notEnoughLetters">Not enough letters!</p>
+                            <p id="tooMuchLetters">Too much letters!</p>
+                            <p id="lettersOrNumbers">Use only letters or numbers!</p>
+                            <p id="emptyUsername">nodeje</p>
+                        </div>
+                    </div>
+    
+                    <div class="divInformation">
+                        <label class="label" for="firstName"> Fecha de Nacimiento:</label>
+                        <input type="text" id="firstName" class="input" placeholder="d/      /m       /a" autocomplete="off" />
+                        <div id="errorFirstName" class="errorDiv">
+                            <p id="emptyFirstName">Do not leave this field empty!</p>
+                            <p id="incorrectFirstName">Numbers, spaces or special symbols are not allowed</p>
+                        </div>
+                    </div>
+    
+                    <div class="divInformation">
+                        <label class="label" for="lastName">Tipo de Documento:</label>
+                        <input type="text" id="lastName" class="input" placeholder="tipo de documento" autocomplete="off" />
+                        <div id="errorLastName" class="errorDiv">
+                            <p id="emptyLastName">Do not leave this field empty!</p>
+                            <p id="incorrectLastName">telefono</p>
+                        </div>
+                    </div>
+    
+                    <div class="divInformation">
+                        <label class="label" for="email">Numero de Documento :</label>
+                        <input type="text" id="email" class="input" placeholder="numero de documento" autocomplete="off" />
+                        <div id="errorEmail" class="errorDiv">
+                            <p id="emptyEmail">Do not leave this field empty!</p>
+                            <p id="incorrectEmail">Incorrect Email </p>
+                        </div>
+                    </div>
+    
+                    <div class="divInformation">
+                        <label class="label" for="password">Email:</label>
+                        <input type="password" id="password" class="input" placeholder="email" autocomplete="off" />
+                        <div id="errorPassword" class="errorDiv">
+                            <p id="emptyPassword">Do not leave this field empty!</p>
+                            <p id="tooShortPassword">Password must contains at least 5 letters or numbers</p>
+                            <p id="tooLongPassword">Password must not be longer than 15 letters or numbers</p>
+                        </div>
+                    </div>
+    
+                    <div class="divInformation">
+                        <label class="label" for="confirmPassword">Numero de Telefono:</label>
+                        <input type="password" id="confirmPassword" class="input" placeholder=" numero de telefono" autocomplete="off" />
+                        <div id="errorConfirmPassword" class="errorDiv">
+                            <p id="passwordNotMatch">Password does not match the confirm password!</p>
+                            <p id="emptyField">Do not leave this field empty!</p>
+                        </div>
+                    </div>
+                </fieldset>
+    
+                <fieldset id="nextStep">
+                    <button id="nextStepBtn">ENVIAR</button>
+                </fieldset>
+    
+                <fieldset id="verifyHuman" style="display: none">
+                    <legend>Verify that you are not a robot</legend>
+                    <div>
+                        <label for="numberVerification" class="labelNumber">4 + 3 = ?</label>
+                        <input type="number" id="numberVerification" autocomplete="off" />
+                        <p id="incorrectSum">Sum is not correct. Try again!</p>
+                    </div>
+                </fieldset>
+    
+                <fieldset id="submitFieldset" style="display: none">
+                    <div id="submit">
+                        <button id="submitBtn">Send</button>
+                    </div>
+                </fieldset>
+    
+                <fieldset id="ageVerification" style="display: none">
+                    <legend>Are you over 18?</legend>
+                    <div>
+                        <input id="yesBtn" type="submit" value="Yes, I am" />
+                        <input id="noBtn" type="reset" value="No, I am not" />
+                    </div>
+                </fieldset>
+    
+                <fieldset id="congratulationsFieldset" style="display: none">
+                    <div>
+                        <p id="congratulations">CONGRATULATIONS!</p>
+                        <p id="successfullySubmitted">YOUR REGISTRATION HAS BEEN SUCCESSFULLY SUBMITTED</p>
+                    </div>
+                </fieldset>
+    
+                <fieldset id="stoppingFieldset" style="display: none">
+                    <div>
+                        <p id="stop">STOP HERE!</p>
+                        <p id="notAllowedToContinue">YOU ARE NOT ALLOWED TO REGISTER</p>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    
+    </body> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

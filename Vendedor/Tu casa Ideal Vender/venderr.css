@@ -1,0 +1,59 @@
+
+    
+    .lop{color: rgb(252, 4, 4);}
+    
+    h1 {
+        font-size: 39px;
+        text-align: left;
+        padding-bottom: 38px;
+        color: rgb(185, 9, 82);
+        
+       
+    }
+
+
+    input {
+        background-color: white;
+        width: 300px;
+        border-radius: 10px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: blueviolet;
+        margin-top: 10px;
+        padding-bottom: 10px;
+
+    }
+
+    select {
+        border-radius: 10px;
+        width: 300px;
+        background-size: 10px;
+        width: 295px;
+        
+
+    }
+
+    body {
+        background-image: url(./img/casa\ campo.jpg );
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 295px;
+        
+        
+     }
+     textarea{
+        background-color: white;
+        width: 295px;
+        border-radius: 9px;
+        
+     }
+     label,input,form{color: rgb(255, 255, 255);
+     }
+     
+     
+        
+    
+    
+    
+    
